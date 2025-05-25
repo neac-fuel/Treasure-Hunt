@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+
+body,h1 {font-family: "Permanent Marker", sans-serif}
+
+body, html {height: 100%}
+
+.display-middle{
+	position:absolute;
+	left:50%;
+	top:20px;
+	transform:translate(-50%,0%);
+	-ms-transform:translate(-50%,0%)
+}
