@@ -26,7 +26,7 @@ span {
 	background-attachment: fixed;
 	background-color: #03001d;
 	min-height: 100%;
-	background-position: center;
+	background-position: center bottom;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
