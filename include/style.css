@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Gabarito");
 
-body,h1 {font-family: "Gabarito", sans-serif; color: #eee7ff}
+body,h1 {font-family: "Gabarito", sans-serif;}
 
 body, html {
 	height: 100%;
@@ -8,6 +8,10 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
+
+body, .light-text {color: #eee7ff;}
+
+h1, .blue-text {color: #83cddb;}
 
 span {
 	display: none;
@@ -39,7 +43,6 @@ span {
 
 #search-bar {
 	background-color: #344a81;
-	color: #83cddb;
 	padding: 4px;
 }
 
@@ -56,6 +59,5 @@ span {
 
 #search-term {
 	display: inline; 
-	color: #83cddb;
 	border-style: none;
-	}
+}
