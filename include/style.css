@@ -4,6 +4,7 @@ body,h1 {font-family: "Gabarito", sans-serif; color: #eee7ff}
 
 body, html {
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -33,6 +34,7 @@ span {
 
 #search-form {
 	text-align: center;
+	min-width: 320px;
 }
 
 #search-bar {
@@ -49,6 +51,7 @@ span {
 
 #output {
 	background-color: rgba(3,0,29,0.7);
+	min-width: 320px;
 }
 
 #search-term {
