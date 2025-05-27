@@ -2,20 +2,23 @@
  *
  */
  
-const form = document.getElementById('clues');
-const searchInput = document.getElementById('search');
-const displayMessage = document.getElementById('displayMessage');
+const searchform = document.getElementById('search-form');
+const searchInput = document.getElementById('search-bar');
+const noResult = document.getElementById('no-result');
+var prevSpan = document.getElementById("help");
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); 
+const searchTerm = document.getElementById('search-term');
 
-  displayMessage.textContent = searchInput.value;
+searchform.addEventListener('submit', function(event) {
+	event.preventDefault(); 
+	var newInput = searchInput.value.trim().replace(/[\s:]+/g, '-').toLowerCase();
+	var newSpan = document.getElementById(newInput);
+	if (!newSpan) {
+		searchTerm.textContent = searchInput.value;
+		newSpan = noResult;
+	}
+
+	prevSpan.style.display = "none";
+	newSpan.style.display = "block";
+	prevSpan = newSpan;
 });
-
-/* Plan
- * 1. Clean the submitted text and lower case it
- * 2. Check to see if submission exists as div
- * 3. If not, set submission to default div name
- * 4. Hide the previous output div (saved as var)
- * 5. Show the new output div (and update the saved var) 
- */ 
