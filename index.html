@@ -2,24 +2,42 @@
 <html>
 <head>
  <title>Bible Warriors End of Year Review</title>
+ <link rel="icon" type="image/x-icon" href="include/favicon.png">
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
  <link rel="stylesheet" href="include/style.css">
 </head>
 
-<body>
+<body class="bgimg">
 
-<div class="display-middle">
+<div class="centering">
 
- <form id="clues">
-	<input type="text" id="search" name="search" autocomplete="off" autofocus />
-	<button type="submit">Submit</button>
+ <form id="search-form">
+	<input type="text" id="search-bar" name="search" autocomplete="off" required pattern="\s*[Hh][Ee][Ll][Pp]\s*|\s*[0-9]{3}\s+[a-zA-Z0-9\s\-:]+" title="Try 'help' if you don't remember." size=35 autofocus />
+	<button type="submit" id="go"><b>GO</b></button>
  </form>
  
- <div id="output">
  
-	<span id="displayMessage"></span>
+ <br/><br/>
+ 
+ <div id="output" >
+	
+	<span id="no-result">
+		<h1><center>No result found for <span id="search-term">your search</span></center></h1>
+	</span>
+	
+	<span id="help"><ul>
+		<h1>Help</h1>
+		<li>Answers should begin with a 3 digit question number followed by a space and then your actual answer to the question.</li>
+		<li>Answers are case-insensitive and will only ever use letters, numbers, colons and hyphens.  No other punctuation will be accepted.</li>
+		<li>When you submit a correct answer, you will see a confirmation and a new clue.</li>
+		<li>An answer is always incorrect if matched with a non-existent or incorrect question number.</li>
+		<li>The question numbers you receive will not be in order.</li>
+		<li>Correct answers need to be specific.  There is some room for error (e.g. extra spaces are generally ignored) but not much.</li>
+		<li>If you're sure an answer is correct but it isn't working, double check everything.  Worst case, you can ask Eric.</li>
+		<li>Some questions may have more than one correct answer.  Sometimes different answers will give different results.</li>
+	</ul></span>
 	
  </div>
 
