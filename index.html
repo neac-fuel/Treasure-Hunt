@@ -14,7 +14,7 @@
 <div class="centering">
 
  <form id="search-form">
-	<input type="text" id="search-bar" name="search" autocomplete="off" required pattern="\s*[Hh][Ee][Ll][Pp]\s*|\s*[0-9]{3}\s+[a-zA-Z0-9\s\-:]+" title="Try 'help' if you don't remember." size=30 autofocus />
+	<input type="text" id="search-bar" class="blue-text" name="search" autocomplete="off" required pattern="\s*[Hh][Ee][Ll][Pp]\s*|\s*[0-9]{3}\s+[a-zA-Z0-9\s\-:]+" title="Try 'help' if you don't remember." size=30 autofocus />
 	<button type="submit" id="go"><b>GO</b></button>
  </form>
  
@@ -24,20 +24,44 @@
  <div id="output" >
 	
 	<span id="no-result">
-		<h1><center>No result found for <span id="search-term">your search</span></center></h1>
+		<h1 class="light-text"><center>No result found for <span id="search-term" class="blue-text">your search</span></center></h1>
 	</span>
 	
 	<span id="help"><ul>
 		<h1>Help</h1>
 		<li>Answers should begin with a 3 digit question number followed by a space and then your actual answer to the question.</li>
 		<li>Answers are case-insensitive and will only ever use letters, numbers, colons and hyphens.  No other punctuation will be accepted.</li>
-		<li>When you submit a correct answer, you will see a confirmation and a new clue.</li>
+		<li>When you submit a correct answer, you will see a new question or clue.</li>
 		<li>An answer is always incorrect if matched with a non-existent or incorrect question number.</li>
 		<li>The question numbers you receive will not be in order.</li>
+		<li>Finding the correct question number may be part of the puzzle.</li>
 		<li>Correct answers need to be specific.  There is some room for error (e.g. extra spaces are generally ignored) but not much.</li>
 		<li>If you're sure an answer is correct but it isn't working, double check everything.  Worst case, you can ask Eric.</li>
-		<li>Some questions may have more than one correct answer.  Sometimes different answers will give different results.</li>
+		<li>Some questions may have more than one correct answer.  Different correct answers will give different results.</li>
 	</ul></span>
+	
+	<span id="001-start">
+		<h1>777</h1>
+		When you don't know the question<br/>
+		But you still need to guess<br/>
+		This most common answer<br/>
+		Is often the best.<br/><br/>
+	</span>
+	
+	<span id="777-jesus">
+		Question and answer<br/>
+		Both describe this ancient form<br/>
+		Counting carefully<br/>
+	</span>
+	
+	<span id="575-haiku">
+		<h1>Every Last Digit</h1>
+		And every last word, including this.
+	</span>
+	
+	<span id="175-best-carefully-this">
+		<h1>End (Tutorial)</h1>
+	</span>
 	
  </div>
 
