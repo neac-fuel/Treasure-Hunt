@@ -1,24 +1,12 @@
-/*
- *
- */
- 
-const searchform = document.getElementById('search-form');
-const searchInput = document.getElementById('search-bar');
-const noResult = document.getElementById('no-result');
-var prevSpan = document.getElementById("help");
+var params = new URLSearchParams(document.location.search);
+var query = params.get("search");
 
-const searchTerm = document.getElementById('search-term');
-
-searchform.addEventListener('submit', function(event) {
-	event.preventDefault(); 
-	var newInput = searchInput.value.trim().replace(/[\s:]+/g, '-').toLowerCase();
-	var newSpan = document.getElementById(newInput);
-	if (!newSpan) {
-		searchTerm.textContent = searchInput.value;
-		newSpan = noResult;
+if (query) {
+	let sanitizedQuery = query.trim().replace(/[\s:]+/g, '-').toLowerCase();
+	var showClue = document.getElementById(sanitizedQuery);
+	if (!showClue) {
+		document.getElementById('search-term').textContent = query;
+		showClue = document.getElementById('no-result');
 	}
-
-	prevSpan.style.display = "none";
-	newSpan.style.display = "block";
-	prevSpan = newSpan;
-});
+	showClue.style.display = "block";
+}
