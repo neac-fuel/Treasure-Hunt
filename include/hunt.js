@@ -36,18 +36,16 @@ if (query) {
 		}
 	}
 	
+	var showClue = document.getElementById(sanitizedQuery);
+	if (!showClue) {
+		document.getElementById('search-term').textContent = query;
+		showClue = document.getElementById('no-result');
+	}
+	showClue.style.display = "block";
+	
 	if ( sanitizedQuery == "00000-god" ) {
 		var bulb = document.getElementById('bgimg');
 		bulb.style.backgroundImage = "url(include/angel.png)";
 		bulb.style.backgroundColor = "#cbebf8";
-	}
-	else {
-	
-		var showClue = document.getElementById(sanitizedQuery);
-		if (!showClue) {
-			document.getElementById('search-term').textContent = query;
-			showClue = document.getElementById('no-result');
-		}
-		showClue.style.display = "block";
 	}
 }
