@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Gabarito");
+
+body,h1 {font-family: "Gabarito", sans-serif;}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body, .light-text {color: #eee7ff;}
+
+h1, .blue-text {color: #83cddb;}
+
+.key-text {color: #ffcc00}
+
+span {
+	display: none;
+	padding: 10px;
+}
+
+.centering {
+	position:absolute;
+	left:50%;
+	top:30px;
+	transform:translate(-50%,0%);
+	-ms-transform:translate(-50%,0%)
+}
+
+#bgimg {
+	background-image: url('background.jpg');
+	background-attachment: fixed;
+	background-color: #4744a3;
+	min-height: 100%;
+	background-position: center bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+img {
+	max-width: 100%;
+}
+
+#search-form {
+	text-align: center;
+	min-width: 320px;
+}
+
+#search-bar {
+	background-color: #363481;
+	padding: 4px;
+}
+
+#go {
+	background-color: #2b2181;
+	color: #fff;
+	padding: 4px 8px;
+}
+
+#output {
+	background-color: rgba(20,10,50,0.6);
+	min-width: 320px;
+}
+
+#search-term {
+	display: inline; 
+	border-style: none;
+}
