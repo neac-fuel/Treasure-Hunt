@@ -14,7 +14,7 @@
 <div class="centering">
 
  <form id="search-form">
-	<input type="text" id="search-bar" class="blue-text" name="search" autocomplete="off" required pattern="\s*[Hh][Ee][Ll][Pp]\s*|\s*[0-9]{1,3}[\-\s]+[a-zA-Z0-9\s\-:]+" title="Try 'help' if you don't remember." size=30 autofocus />
+	<input type="text" id="search-bar" class="blue-text" name="search" autocomplete="off" required pattern="\s*[Hh][Ee][Ll][Pp]\s*|\s*[Qq][Rr]\s*|\s*[0-9]{1,3}[\-\s]+[a-zA-Z0-9\s\-:]+" title="Try 'help' if you don't remember." size=30 autofocus />
 	<button type="submit" id="go"><b>GO</b></button>
  </form>
  
@@ -25,6 +25,10 @@
 	
 	<span id="no-result">
 		<h1 class="light-text"><center>No result found for <span id="search-term" class="blue-text">your search</span></center></h1>
+	</span>
+	
+	<span id="qr">
+	<img src="include/qr-code.png"/>
 	</span>
 	
 	<span id="help"><ul>
